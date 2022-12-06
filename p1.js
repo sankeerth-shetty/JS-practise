@@ -1,0 +1,1 @@
+alert("welcome friend, would you like to have some chat");
