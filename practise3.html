@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js practise</title>
+</head>
+<body>
+    <form action="" method="post">
+        <label for="name">Type your name: </label>
+        <input type="text" name="username" id="username" onblur="data(this, 'usernameError')">
+        <span id="usernameError"></span><br><br>
+        <label for="email">Type your email: </label>
+        <input type="email" name="email" id="useremail" onblur="data(this, 'useremailError')" onkeyup="checkmail(this, 'useremailError')">
+        <span id="useremailError"></span><br><br>
+        <label for="number">Type your number: </label>
+        <input type="tel" maxlength="10" name="number" id="usernumber" onblur="data(this, 'usernumberError')">
+        <span id="usernumberError"></span><br><br>
+        <input type="submit" value="Submit" id="submit" onclick="submit(this, 'submit')">
+        <div id="dispdata"></div>
+    </form>
+
+    <script>
+        function data(user, e){
+            console.log(user.value);
+            var username = document.getElementById("username").value
+            console.log(username);
+            if (user.value == ""){
+                document.getElementById(e).innerText = "This field is required"
+            }
+            else{
+                document.getElementById(e).innerText = ""
+            }
+        }
+    </script>
+</body>
+</html>
