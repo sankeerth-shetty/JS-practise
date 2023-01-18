@@ -4,6 +4,9 @@
     box-sizing: border-box;
     overflow: hidden;
 }
+body{
+    background-color: aqua;
+}
 .border1{
     border: 5px solid black;
     width: 80%;
@@ -26,7 +29,7 @@
     margin: 0 auto;
     padding: 100px;
     border-radius: 10px;
-    background-color: white;
+    background-color: aqua;
 }
 .container1{
     width: 90%;
@@ -42,8 +45,9 @@
 }
 .row{
     display: flex;
+    align-items: center;
 }
-.tred{
+.trr{
     width: 40%;
 }
 .col-25{
@@ -64,7 +68,26 @@
     left: 500px;
     /* right: 0px; */
     animation: car 20s ease-in-out;
+    animation-play-state: paused;
+    animation-iteration-count: infinite;
 }
+
+#tgreen{
+    display: block;
+}
+#tyellow{
+    display: none;
+}
+#tred{
+    display: none;
+}
+.cont2{
+    padding: 40px 0px;
+}
+.cont2 h2{
+    text-align: center;
+}
+
 
 @keyframes car {
     0%{
