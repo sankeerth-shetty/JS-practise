@@ -16,8 +16,8 @@
                 <a href="#" id="tyellow"><img src="../images/trafficYellow.png" alt="traffic yellow" class="trr"></a>
                 <a href="#" id="tred"><img src="../images/trafficRed.png" alt="traffic red" class="trr"></a>
             </div>
-            <div class="col-75 cont2">
-                <h2>Press the signal to start</h2>
+            <div class="col-75 cont2" id="cont2">
+                <h2 id="cont-head">Press the signal to start</h2>
             </div>
             <audio id="car-bgs" controls hidden autoplay>
                 <source src="../sound/car_sound.mp3" type="audio/mp3">
@@ -42,6 +42,10 @@
             document.getElementById("tgreen").style.display = "none";
             document.getElementById("tyellow").style.display = "block";
             document.getElementById("tred").style.display = "none";
+            document.getElementById("cont2").style.backgroundColor = "yellow";
+            document.getElementById("cont2").style.borderColor = "rgb(105, 68, 0)";
+            document.getElementById("cont-head").style.color = "rgb(105, 68, 0)";
+            document.getElementById("cont-head").innerText = "Signal Is Yellow : You Have To Wait!";
             audio.src = "../sound/car_horn.mp3";
             audio.play();
         });
@@ -51,6 +55,10 @@
             document.getElementById("tgreen").style.display = "none";
             document.getElementById("tyellow").style.display = "none";
             document.getElementById("tred").style.display = "block";
+            document.getElementById("cont2").style.backgroundColor = "rgb(255, 38, 38)";
+            document.getElementById("cont2").style.borderColor = "rgb(119, 3, 3)";
+            document.getElementById("cont-head").style.color = "rgb(119, 3, 3)";
+            document.getElementById("cont-head").innerText = "Signal Is Red : You Have To Stop!";
             audio.src = "../sound/car_horn.mp3";
             audio.play();
         });
@@ -60,6 +68,10 @@
             document.getElementById("tgreen").style.display = "block";
             document.getElementById("tyellow").style.display = "none";
             document.getElementById("tred").style.display = "none";
+            document.getElementById("cont2").style.backgroundColor = "rgb(54, 248, 54)";
+            document.getElementById("cont2").style.borderColor = "darkgreen";
+            document.getElementById("cont-head").style.color = "darkgreen";
+            document.getElementById("cont-head").innerText = "Signal Is Green : You Can Go!";
             audio.src = "../sound/song.mp3";
             audio.play();
         });
