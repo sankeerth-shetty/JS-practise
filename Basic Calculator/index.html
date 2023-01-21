@@ -16,59 +16,100 @@
         <label for="value2"> Input 2nd value</label>
         <input type="number" name="value2" id="value2"><br><br>
         <span>Result : </span><span id="result">0</span><br><br>
-        <button id="add" onclick="add()">Addition</button>
+        <button id="add" onclick="add(this)">Addition</button>
+        <button id="sub" onclick="sub(this)">Subtraction</button>
+        <button id="mlt" onclick="mlt(this)">Multiplication</button>
+        <button id="div" onclick="div(this)">Division</button>
+    
+        <!-- <button id="add" onclick="btn(this)">Addition</button>
         <button id="sub" onclick="btn(this)">Subtraction</button>
         <button id="mlt" onclick="btn(this)">Multiplication</button>
-        <button id="div" onclick="btn(this)">Division</button>
+        <button id="div" onclick="btn(this)">Division</button> -->
     </fieldset>
 
 
     <script>
-        function add(){
+        var v1 = document.getElementById("value1").value;
+        var v2 = document.getElementById("value2").value;
 
+        function add(show){
             var v1 = document.getElementById("value1").value;
-            var v2 = document.getElementById("value2").value;    
-            alert(parseInt(v1) + parseInt(v2));
+            var v2 = document.getElementById("value2").value;
+            if(document.getElementById("add")){
+            var rt1 = parseInt(v1) + parseInt(v2);
+            alert(rt1);
+            document.getElementById("result").innerText = rt1;
+            }
+        }
+
+        function sub(show){
+            var v1 = document.getElementById("value1").value;
+            var v2 = document.getElementById("value2").value;
+            if(document.getElementById("sub")){
+            var rt1 = parseInt(v1) - parseInt(v2);
+            alert(rt1);
+            document.getElementById("result").innerText = rt1;
+            }
+        }
+
+        function mlt(show){
+            var v1 = document.getElementById("value1").value;
+            var v2 = document.getElementById("value2").value;
+            if(document.getElementById("mlt")){
+            var rt1 = parseInt(v1) * parseInt(v2);
+            alert(rt1);
+            document.getElementById("result").innerText = rt1;
+            }
+        }
+
+        function div(show){
+            var v1 = document.getElementById("value1").value;
+            var v2 = document.getElementById("value2").value;
+            if(document.getElementById("div")){
+            var rt1 = parseInt(v1) / parseInt(v2);
+            alert(rt1);
+            document.getElementById("result").innerText = rt1;
+            }
         }
 
 
     </script>
 
     <!-- <script>
-    var v1 = document.getElementById("value1").value;
-    var v2 = document.getElementById("value2").value;
+        function btn(show) {
+            var v1 = document.getElementById("value1").value;
+            var v2 = document.getElementById("value2").value;
 
-    function btn(show){
-        document.getElementById("add"){
-            var rt1 = parseFloat(v1) + parseFloat(v2);
-            document.getElementById("result").innerHTML = rt1;
-            window.alert("Result is " + rt1);
-        }
-    }
+            if (document.getElementById("add")) {
+                var rt1 = parseFloat(v1) + parseFloat(v2);
+                document.getElementById("result").innerHTML = rt1;
+                window.alert("Result is " + rt1);
+            }
+            }
 
-    function btn(show){
-        if(document.getElementById("sub")){
-            var rt2 = parseFloat(v1) - parseFloat(v2);
-            document.getElementById("result").innerHTML = rt2;
-            window.alert("Result is " + rt2);
-        }
-    }
+            function btn(show){
+            else if (document.getElementById("sub")) {
+                var rt2 = parseFloat(v1) - parseFloat(v2);
+                document.getElementById("result").innerHTML = rt2;
+                window.alert("Result is " + rt2);
+            }
+            // }
 
-    function btn(show){
-        if(document.getElementById("mlt")){
-            var rt3 = parseFloat(v1) * parseFloat(v2);
-            document.getElementById("result").innerHTML = rt3;
-            window.alert("Result is " + rt3);
-        }
-    }
+            function btn(show){
+            else if (document.getElementById("mlt")) {
+                var rt3 = parseFloat(v1) * parseFloat(v2);
+                document.getElementById("result").innerHTML = rt3;
+                window.alert("Result is " + rt3);
+            }
+            }
 
-    function btn(show){
-        if(document.getElementById("div")){
-            var rt4 = parseFloat(v1) / parseFloat(v2);
-            document.getElementById("result").innerHTML = rt4;
-            window.alert("Result is " + rt4);
+            function btn(show){
+            else if(document.getElementById("div")) {
+                var rt4 = parseFloat(v1) / parseFloat(v2);
+                document.getElementById("result").innerHTML = rt4;
+                window.alert("Result is " + rt4);
+            }
         }
-    }
     </script> -->
 </body>
 
