@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lecture 1</title>
+</head>
+<body>
+    <h1>Javascript lecture 1</h1>
+    <br>
+    <p>Javascript : developed by Brandan Eich - in 1991 : JS was used as client side validator</p>
+    <p>Ryan Dahl - created Node js - its an environment - This made JS a server side</p>
+    <p>Javascript is client and server side language</p>
+    <p>JSON - Javascript Object Notation - API</p>
+    <br><br>
+    <p>Variables : To store the value in memory location</p>
+    <br>
+    <p>var : global scoped</p>
+    <p>let : blocked scoped</p>
+    <p>const : blocked scoped</p>
+    <p>blocked scope is also called local scoped</p>
+    <br><br>
+    <p>for example:</p>
+    <pre>
+        <!-- <script> -->
+        //example of var
+
+        var x = 20; //global
+        {
+            var x = 30; //global
+            console.log (`Value of x is ${x}`); //result will be 30
+        }
+        console.log(`Value of x is ${x}`); //result will be 30, because var is global scope
+        <!-- </script> --> 
+    </pre>
+    <br>
+    <pre>
+        <!-- <script> -->
+        //example of let
+
+        let a = 30; //global
+        {
+            let a = 40; //block 
+            console.log (a); //result will be 40
+        }
+        console.log(a); //result will be 30 and not 40, because let is block scope
+        <!-- </script> --> 
+    </pre>
+    <br>
+    <pre>
+        <!-- <script> --> 
+        //example of const
+
+        const p = 33; //global
+        {
+            const p = 44; //block 
+            console.log (p);
+        }
+        console.log(p);
+        <!-- </script> --> 
+    </pre>
+    <br><br>
+    <p>Typecasting means to change the data type of a value to another data type</p>
+    <br>
+    <pre>
+        <!-- <script> -->
+            let t = 45;
+            console.log(typeof(t));
+            let t1 = 4.56;
+            console.log(typeof(t1));
+
+            //Typecasting prompt string into number
+            let num1 = Number(prompt("enter number: "));
+            let num2 = Number(prompt("enter 2nd number: "));
+            let sum = num1 + num2;
+            console.log(sum);
+            console.log(typeof(num1));
+        <!-- </script> -->
+    </pre>
+    <br>
+    <p>Simple interest example</p>
+    <br>
+    <pre>
+        <!-- <script> -->
+            let p = parseFloat(prompt("enter the principal amount : "));
+            let r = parseFloat(prompt("enter the rate of interest : "));
+            let t = parseFloat(prompt("enter the duration : "));
+
+            let simple_interest = p*r*t*0.01;
+            let amount = p + simple_interest;
+            console.log(`Simple interest of amount is : ${simple_interest}`);
+            console.log(`Total amount you will get ${amount}`);
+        <!-- </script> -->
+    </pre>
+    <p>parseInt, parseFloat and Number</p>
+    <br>
+    <pre>
+        <!-- <script> -->
+            //parseFloat 
+            let x = parseFloat(prompt("enter the number : "));
+            console.log(x);
+
+            //parseInt
+            let x = parseInt(prompt("enter the number : "));
+            console.log(x);
+
+            //Number 
+            let x = Number(prompt("enter the number : "));
+            console.log(x);
+        <!-- </script> -->
+    </pre>
+    <br>
+
+    <p>isNaN function</p>
+    <br>
+    <pre>
+        <!-- <script> -->
+            let x = "Hello World"; //string
+            let x = 20; //number
+
+            if (isNaN(x))
+            {
+                console.log("It is string");
+            }
+            else
+            {
+                console.log("It is number");
+            }
+        <!-- </script> -->
+    </pre>
+</body>
+</html>
