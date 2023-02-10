@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lecture 2</title>
+</head>
+<body>
+    <h1>Javascript lecture 2 - Data types and operators</h1>
+    <br>
+    <p>Data: raw facts: smallest entity of any information</p>
+    <p>collection of data - information</p>
+    <p>variable: let, const, var</p>
+
+    <br>
+    <h2>Data types</h2>
+    <p>primitive data types</p>
+    <ol>
+        <li>number</li>
+        <li>string</li>
+        <li>boolean</li>
+        <li>big int</li>
+        <li>null</li>
+        <li>undefined</li>
+    </ol>
+    <p>non primitive</p>
+    <ol>
+        <li>object</li>
+    </ol>
+    <br>
+
+    <h2>Operators</h2>
+    <p>operands + operator = Expression</p>
+    <p>x + y = z</p>
+    <p>here x, y, z are operands</p>
+    <p>and +,= are operators</p>
+
+    <br>
+    
+    <pre>
+        <!-- <script> -->
+            let x = 20.65;
+            console.log(typeof(x));
+
+
+
+            // Big int methods
+            let x = 4565656565656565;
+            let x = 4565656565656565n;
+            console.log(typeof(x));
+            console.log(x);
+
+            let x = 256n;
+            console.log(typeof(x));
+
+            let x = BigInt(256);
+            console.log(typeof(x));
+
+
+
+
+            //null 
+            let x = null; //this will show null
+            console.log(typeof(x));
+
+
+
+            //undefined
+            let x; //this will show undefined
+            console.log(x);
+
+
+
+            //array
+            let arr = ['Apple', 'Mango', 'Grapes', 'Orange'];  //array is a group of value
+            console.log(typeof(arr)); //this will show object
+
+            const arr = {           // object is a group of key and value
+                'a': 'Vadodara',
+                'b': 'Surat',
+                'c': 'Rajkot'
+            }
+
+            //console.log(arr);
+            console.log(typeof(arr));
+        <!-- </script> -->
+    </pre>
+    
+
+</body>
+</html>
