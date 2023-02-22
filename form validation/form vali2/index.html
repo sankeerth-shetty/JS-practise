@@ -59,53 +59,117 @@
     <div class="container-fluid mt-5 mx-auto">
         <div class="row">
             <div class="col-sm mx-5">
-                <form onsubmit="return false;">
+                <form id="form1" onsubmit="return false;">
                     <div class="mb-1">
                         <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="email1"
-                            onblur="emails(this, 'email-error')">
+                        <input type="email" class="form-control" id="email1" onkeypress="keypressemail(this, 'emailHelp')" placeholder="Enter your email" required>
                         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                        <span id="email-error"><br></span>
+                        <br>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password1"
-                            onblur="password(this, 'password-error')">
-                        <span id="password-error"></span>
+                        <input type="password" class="form-control" id="password1" onkeypress="keypresspass(this, 'password-error')" placeholder="Enter your password" required>
+                        <span id="password-error" class="form-text"></span>
                     </div>
                     <div class="mb-3 form-check">
                         <input type="checkbox" class="form-check-input" id="Check">
                         <label class="form-check-label" for="exampleCheck1">Remember me</label>
                     </div>
-                    <button type="submit" class="btn btn-primary" id="signIn" onclick="submit(this)">Sign in</button>
+                    <button type="submit" class="btn btn-primary" id="signIn" onclick="button(this)">Sign in</button>
                 </form>
+
+                <script>
+                    function button(result) {
+                        let emails = document.getElementById('email1').value;
+                        let password = document.getElementById('password1').value;
+                        if(emails == ""){
+                            document.getElementById('emailHelp').innerHTML = "<b>please enter your email</b>";
+                            document.getElementById('emailHelp').style.color = "red";
+                            document.getElementById('email1').style.borderWidth = "2px";
+                            document.getElementById('email1').style.boxShadow = "0px 0px 4px 2px red";
+                            document.getElementById('email1').style.borderColor = "red";
+                        }
+                        
+                        if(password == ""){
+                            document.getElementById('password-error').innerHTML = "<b>please enter your password</b>";
+                            document.getElementById('password-error').style.color = "red";
+                            document.getElementById('password1').style.borderWidth = "2px";
+                            document.getElementById('password1').style.boxShadow = "0px 0px 4px 2px red";
+                            document.getElementById('password1').style.borderColor = "red";
+                        }
+
+                        if(emails.match('@') && emails.match('.com') && password.length >= 7){
+                            document.getElementById('form1').onsubmit = "return true;";
+                        }
+
+                    }
+
+                    function keypressemail(ids, res){
+                        if(ids.value.match('@') && ids.value.match('.com')){
+                            document.getElementById('emailHelp').innerHTML = "<b>Thank you for trusting us</b>";
+                            document.getElementById('emailHelp').style.color = "green";
+                            document.getElementById('email1').style.borderWidth = "2px";
+                            document.getElementById('email1').style.boxShadow = "0px 0px 4px 2px green";
+                            document.getElementById('email1').style.borderColor = "green";
+                        }
+                        else{
+                            document.getElementById('emailHelp').innerHTML = "<b>please enter your email with @ (e.g.: xyz@xyz.com)</b>";
+                            document.getElementById('emailHelp').style.color = "red";
+                            document.getElementById('email1').style.borderWidth = "2px";
+                            document.getElementById('email1').style.boxShadow = "0px 0px 4px 2px red";
+                            document.getElementById('email1').style.borderColor = "red";
+                        }
+                    }
+
+                    function keypresspass(ids, res){
+                        if(ids.value.length >= 7){
+                            document.getElementById('password-error').innerHTML = "";
+                            document.getElementById('password-error').style.color = "green";
+                            document.getElementById('password1').style.borderWidth = "2px";
+                            document.getElementById('password1').style.boxShadow = "0px 0px 4px 2px green";
+                            document.getElementById('password1').style.borderColor = "green";
+                        }
+                        else{
+                            document.getElementById('password-error').innerHTML = "<b>password must be greater than 8</b>";
+                            document.getElementById('password-error').style.color = "red";
+                            document.getElementById('password1').style.borderWidth = "2px";
+                            document.getElementById('password1').style.boxShadow = "0px 0px 4px 2px red";
+                            document.getElementById('password1').style.borderColor = "red";
+                        }
+                    }
+                </script>
             </div>
             <div class="col-sm mx-5">
-                <form class="row g-3">
+                <form onsubmit="return false;" class="row g-3" id="form2">
                     <div class="col-12">
-                        <label for="formGroupExampleInput" class="form-label">First name</label>
-                        <input type="text" class="form-control" id="" placeholder="First name" aria-label="First name">
+                        <label for="fname" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="fname" placeholder="Enter your name" onkeypress="keypressfname(this, 'eFname')" required>
+                        <span id="eFname" class="form-text"></span>
                     </div>
                     <div class="col-12">
                         <label for="inputEmail4" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="inputEmail4" placeholder="Enter your email">
+                        <input type="email" class="form-control" id="inputEmail" placeholder="Enter your email" onkeypress="keypressfemail(this, 'eFemail')" required>
+                        <span id="eFemail" class="form-text"></span>
                     </div>
                     <div class="col-md-6">
                         <label for="inputPassword4" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="inputPassword4"
-                            placeholder="Enter your password">
+                        <input type="password" class="form-control" id="inputPassword" placeholder="Enter your password" onkeypress="keypressfpass(this, 'eFpass')" required>
+                        <span id="eFpass" class="form-text"></span>
                     </div>
                     <div class="col-md-6">
                         <label for="inputEmail4" class="form-label">Confirm password</label>
-                        <input type="email" class="form-control" id="" placeholder="Enter confirm password">
+                        <input type="email" class="form-control" id="inputCPassword" placeholder="Enter confirm password" onkeypress="keypressfcpass(this, 'eFcpass')" required>
+                        <span id="eFcpass" class="form-text"></span>
                     </div>
                     <div class="col-12">
                         <label for="inputAddress" class="form-label">Address</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="Enter your address">
+                        <input type="text" class="form-control" id="inputAddress" placeholder="Enter your address" required>
+                        <span id="eFaddress" class="form-text"></span>
                     </div>
                     <div class="col-md-6">
                         <label for="inputCity" class="form-label">City</label>
-                        <input type="text" class="form-control" id="inputCity" placeholder="Enter city name">
+                        <input type="text" class="form-control" id="inputCity" placeholder="Enter city name" onkeypress="keypressfname(this, 'eFname')" required>
+                        <span id="eFcity" class="form-text"></span>
                     </div>
                     <div class="col-md-4">
                         <label for="inputState" class="form-label">State</label>
@@ -118,7 +182,8 @@
                     </div>
                     <div class="col-md-2">
                         <label for="inputZip" class="form-label">Pincode</label>
-                        <input type="text" class="form-control" id="inputZip" placeholder="Pin">
+                        <input type="text" class="form-control" id="inputZip" placeholder="Pin" onkeypress="keypressfpin(this, 'eFpin')" required>
+                        <span id="eFpin" class="form-text"></span>
                     </div>
                     <div class="col-12">
                         <div class="form-check">
@@ -129,9 +194,77 @@
                         </div>
                     </div>
                     <div class="col-12">
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary" id="fsubmit" onclick="sub(this)">Submit</button>
                     </div>
                 </form>
+                <br><br>
+
+                <script>
+                    function sub(res){
+                        let finame = document.getElementById('fname').value;
+                        let femail = document.getElementById('inputEmail').value;
+                        let fpass = document.getElementById('inputPassword').value;
+                        let fcpass = document.getElementById('inputCPassword').value;
+                        let faddress = document.getElementById('inputAddress').value;
+                        let fcity = document.getElementById('inputCity').value;
+                        let fzip = document.getElementById('inputZip').value;
+                        if(finame == ""){
+                            document.getElementById('eFname').innerHTML = "<b>please enter your name</b>";
+                            document.getElementById('eFname').style.color = "red";
+                            document.getElementById('fname').style.borderWidth = "2px";
+                            document.getElementById('fname').style.boxShadow = "0px 0px 4px 2px red";
+                            document.getElementById('fname').style.borderColor = "red";
+                        }
+
+                        if(femail == ""){
+                            document.getElementById('eFemail').innerHTML = "<b>please enter your email</b>";
+                            document.getElementById('eFemail').style.color = "red";
+                            document.getElementById('inputEmail').style.borderWidth = "2px";
+                            document.getElementById('inputEmail').style.boxShadow = "0px 0px 4px 2px red";
+                            document.getElementById('inputEmail').style.borderColor = "red";
+                        }
+                        
+                        if(fpass == ""){
+                            document.getElementById('eFpass').innerHTML = "<b>please enter your password</b>";
+                            document.getElementById('eFpass').style.color = "red";
+                            document.getElementById('inputPassword').style.borderWidth = "2px";
+                            document.getElementById('inputPassword').style.boxShadow = "0px 0px 4px 2px red";
+                            document.getElementById('inputPassword').style.borderColor = "red";
+                        }
+
+                        if(fcpass == ""){
+                            document.getElementById('eFcpass').innerHTML = "<b>please enter your confirm password</b>";
+                            document.getElementById('eFcpass').style.color = "red";
+                            document.getElementById('inputCPassword').style.borderWidth = "2px";
+                            document.getElementById('inputCPassword').style.boxShadow = "0px 0px 4px 2px red";
+                            document.getElementById('inputCPassword').style.borderColor = "red";
+                        }
+
+                        if(faddress == ""){
+                            document.getElementById('eFaddress').innerHTML = "<b>please enter your address</b>";
+                            document.getElementById('eFaddress').style.color = "red";
+                            document.getElementById('inputAddress').style.borderWidth = "2px";
+                            document.getElementById('inputAddress').style.boxShadow = "0px 0px 4px 2px red";
+                            document.getElementById('inputAddress').style.borderColor = "red";
+                        }
+
+                        if(fcity == ""){
+                            document.getElementById('eFcity').innerHTML = "<b>please enter your city</b>";
+                            document.getElementById('eFcity').style.color = "red";
+                            document.getElementById('inputCity').style.borderWidth = "2px";
+                            document.getElementById('inputCity').style.boxShadow = "0px 0px 4px 2px red";
+                            document.getElementById('inputCity').style.borderColor = "red";
+                        }
+
+                        if(fzip == ""){
+                            document.getElementById('eFpin').innerHTML = "<b>please enter your pin</b>";
+                            document.getElementById('eFpin').style.color = "red";
+                            document.getElementById('inputZip').style.borderWidth = "2px";
+                            document.getElementById('inputZip').style.boxShadow = "0px 0px 4px 2px red";
+                            document.getElementById('inputZip').style.borderColor = "red";
+                        }
+                    }
+                </script>
             </div>
 
         </div>
@@ -142,20 +275,7 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script> -->
 
-    <script>
-        function submit(res) {
-            let emails = document.getElementById('email1');
-            let pass = document.getElementById('password1');
-            if(emails.value == ""){
-                document.getElementById('email-error').innerHTML = "<b> Please fill your email </b>";
-                document.getElementById('email-error').style.color = 'red';
-                document.getElementById('email').style.borderColor = 'red';
-            }
-            else{
 
-            }
-        }
-    </script>
 </body>
 
 </html>
