@@ -6,41 +6,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-
+        #address-title{
+            vertical-align: top;
+        }
+        .ins{
+            width: 95%;
+            padding: 8px 0px;
+        }
+        caption{
+            text-decoration: underline;
+            margin: 20px 0px;
+            font-size: x-large;
+            font-weight: 600;
+        }
+        table{
+            margin: 0 auto;
+            width: 90%;
+        }
+        table, tr, td{
+            /* border: 1px solid black; */
+        }
+        #fname, #lname, #nname, #email, #password, #repassword, #date-of-birth, #number, #address{
+            border: 2px solid black;
+        }
+        #form-data{
+            border: 1px solid black;
+            margin: 0 auto;
+            width: 45%;
+            padding-bottom: 20px;
+            background-image: linear-gradient( rgb(235, 235, 235), rgb(180, 180, 255));
+        }
+        .submit, .reset{
+            padding: 10px 15px;
+            border: 1px solid black;
+        }
+        .submit:hover, .reset:hover{
+            background-color: rgb(255, 65, 65);
+            color: white;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
-    <form action="" id="form-data">
-        <label for="name">First Name</label>
-        <input type="text" name="fname" id="fname" placeholder="enter your name" onblur="error(this, 'error-fname', 'first name')" required>
-        <span id="error-fname" value="first name"><br><br></span>
-        <label for="name">Last Name</label>
-        <input type="text" name="lname" id="lname" placeholder="enter your name" onblur="error(this, 'error-lname', 'last name')" required>
-        <span id="error-lname" value="last name"><br><br></span>
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" placeholder="enter your email" onblur="error(this, 'error-email', 'email')" required>
-        <span id="error-email" value="email"><br><br></span>
-        <label for="number">Mobile No.</label>
-        <input type="number" name="number" id="number" placeholder="enter your mobile number" onblur="error(this, 'error-mobile', 'mobile number')" required>
-        <span id="error-mobile" value="mobile number"><br><br></span>
-        <input type="submit" value="submit" onclick="display()">
-        <input type="button" value="reset" onclick="reset()">
+    <form action="" id="form-data" onsubmit="return false;">
+        <table border="0">
+            <caption>Registration form</caption>
+            <tr>
+                <td><label for="fname"><b>First Name : </b>&nbsp;</label></td>
+                <td>
+                    <input type="text" name="fname" id="fname" placeholder=" enter your first name" onblur="error(this, 'error-fname', 'first name')" onkeypress="check(this, 'error-fname')" class="ins" >
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><span id="error-fname" value="first name"><br></span></td>
+            </tr>
+            <tr>
+                <td><label for="lname"><b>Last Name : </b>&nbsp;</label></td>
+                <td><input type="text" name="lname" id="lname" placeholder=" enter your last name" onblur="error(this, 'error-lname', 'last name')" onkeypress="check(this, 'error-lname')" class="ins" ></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><span id="error-lname" value="last name"><br></span></td>
+            </tr>
+            <tr>
+                <td><label for="nname"><b>Nick Name : </b>&nbsp;</label></td>
+                <td><input type="text" name="nname" id="nname" placeholder=" enter your nick name" onblur="error(this, 'error-nname', 'nick name')" onkeypress="check(this, 'error-nname')" class="ins" ></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><span id="error-nname" value="nick name"><br></span></td>
+            </tr>
+            <tr>
+                <td><label for="email"><b>Email : </b>&nbsp;</label></td>
+                <td><input type="email" name="email" id="email" placeholder=" enter your email" onblur="error(this, 'error-email', 'email')" onkeypress="emails(this, 'error-email')" class="ins" ></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><span id="error-email" value="email"><br></span></td>
+            </tr>
+            <tr>
+                <td><label for="password"><b>Password : </b>&nbsp;</label></td>
+                <td><input type="password" name="password" id="password" placeholder=" enter your password" onblur="error(this, 'error-password', 'password')" onkeypress="passwords1(this, 'error-password')" class="ins" ></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><span id="error-password" value="password"><br></span></td>
+            </tr>
+            <tr>
+                <td><label for="repassword"><b>Confirm Password : </b>&nbsp;</label></td>
+                <td><input type="password" name="repassword" id="repassword" placeholder=" confirm your password" onblur="error1(this, 'error-repassword')" class="ins" ></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><span id="error-repassword" value="confirm password"><br></span></td>
+            </tr>
+            <tr>
+                <td><label for="date-of-birth"><b>Date of birth : </b>&nbsp;</label></td>
+                <td><input type="date" name="date of birth" id="date-of-birth" onblur="error(this, 'error-date', 'date of birth')" class="ins" ></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><span id="error-date" value="date of birth"><br></span></td>
+            </tr>
+            <tr>
+                <td><label for="gender"><b>Gender : </b>&nbsp;</label></td>
+                <td>
+                    <input type="radio" name="gender" id="gender" value="male"> Male &nbsp;
+                    <input type="radio" name="gender" id="gender" value="female"> Female &nbsp;
+                    <input type="radio" name="gender" id="gender" value="others"> Others
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><br></td>
+            </tr>
+            <tr>
+                <td><label for="number"><b>Mobile No. : </b>&nbsp;</label></td>
+                <td><input type="text" name="number" id="number" maxlength="10" placeholder=" enter your mobile number" onblur="error(this, 'error-mobile', 'mobile number')" onkeypress="mobile1(this, 'error-mobile')" class="ins"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><span id="error-mobile" value="mobile number"><br></span></td>
+            </tr>
+            <tr>
+                <td id="address-title"><b>Address : </b>&nbsp;</td>
+                <td><textarea name="address" id="address" cols="38" rows="5" placeholder="enter your address" onblur="error(this, 'error-address', 'address')" ></textarea></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><span id="error-address" value="address"><br></span></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><br>&nbsp; <input type="submit" value="submit" class="submit" onclick="display(this)"> &nbsp; &nbsp; &nbsp; <input type="button" value="reset" class="reset" onclick="reset()"></td>
+            </tr>
+        </table>  
+        
     </form>
 
-    <script>
-        function error(blur, mssg, ens){
-            if(blur.value == ""){
-                document.getElementById(mssg).innerHTML = "Please enter your "+ens+"<br><br>";
-                document.getElementById(mssg).style.color = "red";
-            }
-            else{
-                document.getElementById(mssg).innerHTML = "<br><br>";
-            }
-        }
 
-        function reset(){
-            document.getElementById('form-data').reset();
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
