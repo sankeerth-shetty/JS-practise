@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="heading">Welcome to Jquery</h1>
+    <h2 id="head">This is heading</h2>
+    <a href="#">Google.com</a>
+    <p class="paragraph">this para 1</p>
+    <p class="paragraph">this para 2</p>
+    <p id="para">this is para</p>
+
+    <button id="btn">Click it</button>
+</body>
+
+<script>
+    // element selector 
+    $("h1").css("color","red");
+
+    //class selector
+    $(".heading").css("color","teal");
+
+    //id selector
+    $("#head").css("color","blue");
+
+    //Universal Selector
+    $("*").css("color","coral");
+
+    jQuery("#para").css("color","green");
+
+    $("#btn").click(function(){
+        // if($(".paragraph").show()){
+            $(".paragraph").hide();
+        // }
+        // else if($(".paragraph").hide()){
+            $(".paragraph").show()
+        // }
+    });
+
+    // $("#btn").click(function(){
+    //     $(this).hide();
+    // });
+</script>
+
+</html>
