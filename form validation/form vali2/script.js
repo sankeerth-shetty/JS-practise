@@ -236,7 +236,7 @@ function keypressfpass(ins, res){
         document.getElementById('inputPassword').style.borderColor = "green";
     }
     else{
-        document.getElementById(res).innerHTML = "<b>password must be more than 8 and must conatain @ and & characters</b>";
+        document.getElementById(res).innerHTML = "<b>password must be more than 8 and must contain @ and & characters</b>";
         document.getElementById(res).style.color = "red";
         document.getElementById('inputPassword').style.borderWidth = "2px";
         document.getElementById('inputPassword').style.boxShadow = "0px 0px 4px 2px red";
