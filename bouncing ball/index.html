@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        .space {
+            height: 630px;
+            border: 1px solid;
+        }
+
+        .ball {
+            margin: 0 auto;
+            position: relative;
+            top: 510px;
+            width: 120px;
+            cursor: pointer;
+            animation: bounce;
+            animation-duration: 4s;
+            animation-play-state: paused;
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes bounce {
+            0% {
+                top: 510px;
+            }
+
+            10% {
+                top: 10px;
+            }
+
+            20% {
+                top: 510px;
+            }
+
+            30% {
+                top: 150px;
+            }
+
+            40% {
+                top: 510px;
+            }
+
+            50% {
+                top: 280px;
+            }
+
+            60% {
+                top: 510px;
+            }
+
+            70% {
+                top: 390px;
+            }
+
+            80% {
+                top: 510px;
+            }
+
+            90% {
+                top: 440px;
+            }
+
+            100% {
+                top: 510px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="space">
+        <div style="text-align: center;">
+            <img src="Ball.png" id="ball" class="ball" alt="ball image" onclick="bounce(this)">
+        </div>
+    </div>
+
+    <script>
+        function bounce(bball){
+            let ball = document.getElementById('ball');
+            
+            ball.style.animationPlayState = "running";
+
+        }
+    </script>
+</body>
+
+</html>
