@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lecture 10</title>
+</head>
+<body>
+    <h1>Advance Javascript Concepts:</h1><br>
+
+    <h2>Arrow Function:</h2>
+    <p>map</p>
+    <p>filter</p>
+    <p>reduce</p>
+
+    <br>
+
+    <h2>loops:</h2>
+    <p>while</p>
+    <p>for</p>
+    <p>do...while</p>
+
+    <p>for in : object literals</p>
+    <p>for of : array, string</p>
+
+    <pre>
+        <!-- <script> -->
+            /*
+
+            function additionNumber(x,y,z)
+            {
+                return x+y+z;
+            }
+
+            let res = additionNumber(25,24,26);
+            console.log(`Addition of numbers are: ${res}`);
+            
+            */
+
+
+            /*
+
+            //call back function
+
+            const res = function(x,y,z){
+                return x+y+z;
+            }
+
+            console.log(res(25,24,26));
+            
+            */
+
+
+            /*
+
+            //arrow function
+
+            const res = (x,y,z) => x+y+z;
+            console.log(res(25,24,26));
+            
+            */
+
+
+            /*
+        
+            const book = {
+                title : 'Last Eve',
+                author : 'Ramesh',
+                year : '2025'
+            };
+
+            for(const i in book)
+            {
+                console.log(`${i} : ${book[i]}`);
+            }
+        
+            */
+
+
+            /*
+            
+            const arr = ['Apple','Orange','Mango','Grapes'];
+
+            for(const n of arr)
+            {
+                console.log(n);
+            }
+
+            for(const n in arr)
+            {
+                console.log(n);
+            }
+            
+            */
+
+
+            /*
+            
+            const arr = [1,2,3,4,5,6,7,8,9];
+            for(const i of arr)
+            {
+                console.log(i);
+                if(i%2==0)
+                {
+                    console.log(i);
+                }
+                if(i%2==1)
+                {
+                    console.log(i);
+                }
+            }
+            
+            */
+
+
+            /*
+            const m = arr.map(r => r%2==0);
+            console.log(m);
+            */
+
+            /*
+            const m = arr.map(x => x+2);
+            console.log(m);
+            */
+
+
+            /*
+            
+            const arr = [64,256,324,286,225,400];
+
+            const res = arr.map(r => Math.sqrt(r));
+            console.log(res);
+            
+            */
+
+
+            /*
+
+            const arr = ['Apple','Pineapple','Mango','Orange'];
+
+            const res = arr.map(r => r.length>7);
+            console.log(res);
+
+            */
+
+
+            /*
+
+            //filter
+
+            const arr = [1,2,3,4,5,6,7,8,9];
+
+            const v = arr.filter(r => r>6);
+            console.log(v);
+
+            const v = arr.map(r => r>6);
+            console.log(v);
+
+            const v = arr.filter(r => r%2==0);
+            console.log(v);
+
+            const v = arr.filter(r => r%2==1);
+            console.log(v);
+
+            */
+
+
+            /*
+            const arr = ['Apple','Mango','Pineapple','Orange'];
+
+            const v = arr.filter(r => r.length>5);
+            console.log(v);
+            */
+
+        <!-- </script> -->
+    </pre>
+</body>
+</html>
