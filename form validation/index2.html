@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="uname">user name : </label>
+        <input type="text" name="" id="uname" onblur="notify(this, 'nerror', 'name')" onfocus="info(this)" required>
+        <span id="error1"></span><span id="nerror" value="name"><br></span>
+        <br><br>
+        <label for="uemail">email : </label>
+        <input type="text" name="" id="uemail" onblur="notify(this, 'eerror', 'email')" onfocus="info(this)" required>
+        <span id="error2"></span><span id="eerror" value="email"><br></span>
+        <br><br>
+        <label for="upass">password : </label>
+        <input type="text" name="" id="upass" onblur="notify(this, 'perror', 'password')" onfocus="info(this)" required>
+        <span id="error3"></span><span id="perror" value="password"><br></span>
+        <br><br>
+        <label for="umobile">mobile number : </label>
+        <input type="text" name="" id="umobile" onblur="notify(this, 'merror', 'mobile')" onfocus="info(this)" required>
+        <span id="error4"></span><span id="merror" value="mobile"><br></span>
+    </form>
+</body>
+</html>
+<script>
+    function notify(onblur, error, errors){
+        let name = document.getElementById('uname').value;
+        
+        if(onblur.value == ""){
+            document.getElementById(error).innerHTML = "<br> Please fill "+ errors +" field";
+            document.getElementById(error).style.color = "red";
+        }
+        else{
+            document.getElementById(error).innerHTML = "<br>";
+        }
+        
+    }
+
+    
+</script>
