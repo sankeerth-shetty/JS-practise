@@ -1,17 +1,17 @@
 const a = [
-    {name :'numerator', category :'it', start : 1990, end : 2023},
-    {name :'idea', category :'telecom', start : 1990, end : 2023},
-    {name :'yrf', category :'production', start : 1980, end : 2019},
-    {name :'stark industries', category :'it', start : 1980, end : 2040},
-    {name :'oscorp', category :'it', start : 1990, end : 2010},
-    {name :'vault', category :'finance', start : 2000, end : 2023},
-    {name :'miami inc', category :'it', start : 1980, end : 2015},
-    {name :'disney pixar', category :'animation', start : 1990, end : 2023},
-    {name :'jio inc', category :'telecom', start : 2015, end : 2040},
-    {name :'airtel', category :'telecom', start : 1990, end : 2025},
+    { name: 'numerator', category: 'it', start: 1990, end: 2023 },
+    { name: 'idea', category: 'telecom', start: 1990, end: 2023 },
+    { name: 'yrf', category: 'production', start: 1980, end: 2019 },
+    { name: 'stark industries', category: 'it', start: 1980, end: 2040 },
+    { name: 'oscorp', category: 'it', start: 1990, end: 2010 },
+    { name: 'vault', category: 'finance', start: 2000, end: 2023 },
+    { name: 'miami inc', category: 'it', start: 1980, end: 2015 },
+    { name: 'disney pixar', category: 'animation', start: 1990, end: 2023 },
+    { name: 'jio inc', category: 'telecom', start: 2015, end: 2040 },
+    { name: 'airtel', category: 'telecom', start: 1990, end: 1995 },
 ];
 
-const ages = [13,12,20,10,5,54,21,44,61,13,15,45,25,64,32];
+const ages = [13, 12, 20, 10, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 
 // to print all companies detail :-
 // for(let i=0; i<a.length; i++)
@@ -76,11 +76,11 @@ const ages = [13,12,20,10,5,54,21,44,61,13,15,45,25,64,32];
 //     }
 // });
 
-// console.log(retail(a));
+// console.log(retailCompanies);
 
 // By using arrow function
 
-// const retailCompanies = a.filter(company => company.category === 'Retail');
+// const retailCompanies = a.filter(company => company.category === 'telecom');
 // console.log(retailCompanies);
 
 // get 80's companies 
@@ -113,7 +113,5 @@ const ages = [13,12,20,10,5,54,21,44,61,13,15,45,25,64,32];
 // });
 // console.log(textMap);
 
-
-
-
-
+// const b = itcomp(a);
+// console.log(a);
