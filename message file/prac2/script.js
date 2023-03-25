@@ -83,7 +83,7 @@ const ages = [13, 12, 20, 10, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 // const retailCompanies = a.filter(company => company.category === 'telecom');
 // console.log(retailCompanies);
 
-// get 80's companies 
+// get 80's companies
 
 // const eightiesCompanies = a.filter(company => (company.start >= 1980 && company.start < 1990));
 // console.log(eightiesCompanies);
@@ -140,3 +140,23 @@ const ages = [13, 12, 20, 10, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 
 // const sortedComp = a.sort((a,b) => (a.start > b.start ? 1 : -1));
 // console.log(sortedComp);
+
+
+// sort ages 
+// const sortAges = ages.sort();
+// console.log(sortAges);
+
+// (ascending order sort)
+// const sortAges = ages.sort((a,b) => a-b);
+// console.log(sortAges);
+
+// (decending order sort)
+// const sortAges = ages.sort((a,b) => b-a);
+// console.log(sortAges);
+
+// reduce
+// let ageSum = 0;
+// for(let i=0; i<ages.length; i++){
+//     ageSum = ageSum + ages[i];
+// }
+// console.log(ageSum);
