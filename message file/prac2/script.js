@@ -160,3 +160,30 @@ const ages = [13, 12, 20, 10, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 //     ageSum = ageSum + ages[i];
 // }
 // console.log(ageSum);
+
+// adding by reduce
+// const ageSum = ages.reduce(function(total,age){
+//     return total = age;
+// },0);
+
+// console.log(ageSum);
+// const ageSum = ages.reduce((total,age) => total + age, 0);
+// console.log(ageSum);
+
+// get total years for each companies : 
+
+// const totalYears = a.reduce(function(total,company){
+//     return total = (a.end - a.start);
+// }, 0);
+
+// console.log(totalYears);
+
+
+//combine methods
+
+// const combined = ages.map(age => age*2)
+// .filter (age => age>=40)
+// .sort ((a,b) => a-b)
+// .reduce ((a,b) => a-b, 0);
+
+// console.log(combined);
