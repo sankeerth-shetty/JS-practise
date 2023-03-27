@@ -1,5 +1,5 @@
 const a = [
-    { name: 'numerator', category: 'it', start: 1990, end: 2023 },
+    { name: 'bit buffs', category: 'it', start: 1990, end: 2023 },
     { name: 'idea', category: 'telecom', start: 1990, end: 2023 },
     { name: 'yrf', category: 'production', start: 1980, end: 2019 },
     { name: 'stark industries', category: 'it', start: 1980, end: 2040 },
