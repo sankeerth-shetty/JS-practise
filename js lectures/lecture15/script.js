@@ -17,7 +17,43 @@ arr1.shift();
 arr1.push('grapes');
 console.log(arr1);
 
-let arr =[1,2,3,4,5,6,7,8,9];
+let arr2 = [1,2,3,4,5,6,7,8,9];
+
+//Looping : while, for, do..while, for in, for of
+let i = 0;
+while(i<arr2.length)
+{
+    console.log(arr2[i]);
+    i = i+1;
+}
+
+for(let i=0; i<arr2.length; i++)
+{
+    console.log(arr2[i]);
+}
+
+let j = 0;
+do{
+    console.log(arr2[j]);
+    j = j+1;
+} while(j<arr2.length);
+
+//while, for - entry controlled loop :-
+
+let k = 10;
+while(k<10)
+{
+    console.log('Hello World');
+}
+
+//do..while - exit controlled loop :-
+
+let l = 10;
+do{
+    console.log(l);
+}while(l<10);
+
+let arr = arr2;
 for(let i=0; i<arr.length; i++){
     if(i%2 == 0)
     {
