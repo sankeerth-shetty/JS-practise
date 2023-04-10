@@ -9,53 +9,35 @@
 <body>
     <form action="">
         <label for="uname">user name : </label>
-        <input type="text" name="" id="uname" onkeypress="onlyalpha(this, 'error')" onblur="check(this, 'error1', ' user name ')" onfocus="focushere(this)"><span id="error1"></span><span id="error"></span>
+        <input type="text" name="" id="uname" onblur="notify(this, 'nerror', 'name')" onfocus="info(this)" required>
+        <span id="error1"></span><span id="nerror" value="name"><br></span>
         <br><br>
         <label for="uemail">email : </label>
-        <input type="text" name="" id="uemail" onblur="check(this, 'error2', ' email ')" onfocus="focushere(this)"><span id="error2"></span>
+        <input type="text" name="" id="uemail" onblur="notify(this, 'eerror', 'email')" onfocus="info(this)" required>
+        <span id="error2"></span><span id="eerror" value="email"><br></span>
         <br><br>
         <label for="upass">password : </label>
-        <input type="text" name="" id="upass" onblur="check(this, 'error3', ' password ')" onfocus="focushere(this)"><span id="error3"></span>
+        <input type="text" name="" id="upass" onblur="notify(this, 'perror', 'password')" onfocus="info(this)" required>
+        <span id="error3"></span><span id="perror" value="password"><br></span>
         <br><br>
         <label for="umobile">mobile number : </label>
-        <input type="text" name="" id="umobile" onblur="check(this, 'error4', ' mobile number ')" onfocus="focushere(this)"><span id="error4"></span>
+        <input type="text" name="" id="umobile" onblur="notify(this, 'merror', 'mobile')" onfocus="info(this)" required>
+        <span id="error4"></span><span id="merror" value="mobile"><br></span>
     </form>
 </body>
 </html>
 <script>
-    function check(koibhi, spnid, b){
-        if(koibhi.value == ""){
-            document.getElementById(spnid).innerText = b + "is required";
-            // document.getElementById(spnid).innerHTML = "<b>type here</b>";
+    function notify(onblur, error, errors){
+        let name = document.getElementById('uname').value;
+        
+        if(onblur.value == ""){
+            document.getElementById(error).innerHTML = "<br> Please fill "+ errors +" field";
+            document.getElementById(error).style.color = "red";
         }
         else{
-            document.getElementById(spnid).innerText = "";
-
+            document.getElementById(error).innerHTML = "<br>";
         }
-    }
-
-
-    function focushere(a,spnid){
-        // document.getElementById('uname').style.background = 'red';
-        // document.getElementById('upass').style.background = 'yellow';
-        // document.getElementById('uemail').style.background = 'green';
-        // document.getElementById('umobile').style.background = 'blue';
-        a.style.background = "khaki";
-    }
-
-
-
-    function onlyalpha(a,spnid){
-        var name = /^[a-zA-Z]+$/
-        if(name.test(a.value)){
-         document.getElementById(spnid).innerText = ""
-
-        }
-        else{
-         document.getElementById(spnid).innerText = " Type only Alphabet here"
-         document.getElementById(spnid).style.color = 'red';
-            
-        }
+        
     }
 
     
