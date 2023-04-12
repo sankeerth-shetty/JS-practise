@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Jquery fadeIn demo</title>
+  <style>
+  span{
+    color: red;
+    cursor: pointer;
+  }
+  div{
+    margin: 3px;
+    width: 80px;
+    display: none;
+    height: 80px;
+    float: left;
+    text-align: center;
+  }
+  #one{
+    background-color: red;
+  }
+  #two{
+    background-color: yellow;
+  }
+  #three{
+    background-color: green;
+  }
+  #four{
+    background-color: blue;
+  }
+  #five{
+    background-color: orangered;
+  }
+  #six{
+    background-color: violet;
+  }
+  #seven{
+    background-color: purple;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+</head>
+<body>
+ 
+<span>&nbsp; Click here...</span>
+<div id="one"><b>Hello</b></div>
+<div id="two"><b>Everyone</b></div>
+<div id="three"><b>My</b></div>
+<div id="four"><b>Name</b></div>
+<div id="five"><b>Is</b></div>
+<div id="six"><b>Sankeerth</b></div>
+ 
+<script>
+$("span").click(function() {
+  $("div:hidden").first().fadeIn("slow");
+});
+</script>
+ 
+</body>
+</html>
