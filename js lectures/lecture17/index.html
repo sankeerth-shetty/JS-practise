@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP</title>
+</head>
+<body>
+    <h3>Object Oriented Programming</h3>
+
+    <p>class</p>
+    <p>object</p>
+    <p>inheritance</p>
+    <p>encapsulation</p>
+    <p>polymorphism</p>
+    <p>abstraction</p>
+
+    <p>ES5 - prototype</p>
+    <p>ES6 - oops</p>
+
+    <script>
+        const employee = {
+            id : 1001,
+            emp_name : "Ram",
+            salary : 25000,
+            depart : "Electronics",
+            frameworks : ['Angular', 'Vue Js', 'Django', 'Laravel'],
+            department : function(){
+                // return `Employee department is : ${depart}`; // this will show not defined
+                return `Employee department is : ${this.depart}`;
+            }
+        }
+        console.log(this);
+
+        console.log(employee.frameworks);
+        console.log(employee.frameworks[0]);
+        console.log(employee.frameworks[1]);
+        console.log(employee.department);
+        console.log(employee.department());
+
+    </script>
+</body>
+</html>
