@@ -64,6 +64,39 @@
     </pre>
 
     <p>class - keyword which is used to create class</p>
+
+    <p>ES6:-</p>
+    <pre>
+        <!-- <script> -->
+            class HelloWorld {
+                display() {
+                    console.log("Hello World");
+                }
+            }
+
+            const obj = new HelloWorld();  //constructor
+            obj.display();  //function calling
+
+            let st = "Hello World";
+            let arr = ["apple","orange","pineapple","grapes"];
+
+            //length function
+            console.log(st.length);
+            console.log(arr.length);
+
+            //method
+            console.log(arr.toLowerCase());
+            console.log(st.toLowerCase());
+
+            class Animal {
+                constructor(name,age)
+                {
+                    console.log(`Your name is ${name} & age is ${age}`);
+                }
+            }
+            const obj = new Animal("Sam",25);
+        <!-- </script> -->
+    </pre>
 </body>
 
 </html>
