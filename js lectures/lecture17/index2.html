@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for each method</title>
+</head>
+
+<body>
+    <script>
+        const companies = [
+            {name: 'Finsen', category: 'Finance', start: 1981, end: 2003},
+            {name: 'PistonX', category: 'Auto', start: 1982, end: 2008},
+            {name: 'Vchips', category: 'Technology', start: 1975, end: 2015},
+            {name: 'Suzuki', category: 'Auto', start: 1992, end: 2021},
+            {name: 'Mac N Cheese', category: 'Fast Food', start: 1882, end: 2022},
+            {name: 'Bajaj Finance', category: 'Finance', start: 1985, end: 2010},
+            {name: 'Wire Net', category: 'Technology', start: 1976, end: 1992},
+            {name: 'Icici', category: 'Finance', start: 1981, end: 1989},
+        ];
+
+        for(let i=0; i<companies.length; i++)
+        {
+            console.log(companies[i].category);
+        }
+        
+        //Using for each
+        companies.forEach(function(company){
+            console.log(company);
+        });
+
+        companies.forEach(function(company_value){
+            console.log(company_value);
+        });
+
+        const arr = ['apple','orange','banana','kiwi'];
+        arr.push('grapes');
+        arr.push('papaya');
+        arr.unshift('mango');
+        console.log(arr);
+
+        arr.forEach(function(arr_name){
+            console.log(arr_name);
+        });
+
+        for(r of arr)
+        {
+            console.log(r);
+        }
+
+        for(r in arr)
+        {
+            console.log(r);
+        }
+    </script>
+</body>
+
+</html>
