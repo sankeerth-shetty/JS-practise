@@ -21,6 +21,8 @@
             {name: 'Icici', category: 'Finance', start: 1981, end: 1989},
         ];
 
+        const ages = [22,15,23,84,75,44,20,12,56];
+
         for(let i=0; i<companies.length; i++)
         {
             console.log(companies[i].category);
@@ -34,6 +36,27 @@
         companies.forEach(function(company_value){
             console.log(company_value);
         });
+
+        const tenYears = companies.filter(function(company){
+            if(company.end - company.start >= 10)
+            {
+                // console.log(company);
+                return true;
+            }
+        });
+        console.log(tenYears);
+
+        const tenYears1 = companies.filter(company => (company.end - company.start >= 10));
+        console.log(tenYears1);
+
+        const companyNames = companies.map(comp_name => comp_name.name);
+        console.log(companyNames);
+
+        const companyNames1 = companies.map(comp_name => 1);
+        console.log(companyNames1);
+
+        const reduceAges = ages.reduce((x,y) => x+y);
+        console.log(reduceAges);
 
         const arr = ['apple','orange','banana','kiwi'];
         arr.push('grapes');
