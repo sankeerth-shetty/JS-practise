@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let ans = Number(prompt('enter the number : '));
+        let rem = 0;
+        let rev = 0;
+        let num = ans;
+        while(ans > 0)
+        {
+            rem = ans % 10;
+            rev = rev * 10 + rem;
+            ans = Math.floor(ans/10);
+        }
+        alert('sum of digits are : ' + rev);
+
+        if(num == rev)
+        {
+            alert('palindrome');
+        }
+        else{
+            alert('not palindrome');
+        }
+
+    </script>
+</body>
+
+</html>
