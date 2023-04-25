@@ -1,12 +1,12 @@
-// class Animal{
-//     display()
-//     {
-//         console.log('This is animal class');
-//     }
-// }
+class Animal{
+    display()
+    {
+        console.log('This is animal class');
+    }
+}
 
-// const obj = new Animal();
-// obj.display();
+const obj = new Animal();
+obj.display();
 
 
 // class Animal{
