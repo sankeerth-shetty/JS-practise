@@ -97,21 +97,8 @@ class Trees{
     }
 }
 
-class Fruits extends Trees{
-    constructor(name,color)
-    {
-        super(name);
-        this.color = color;
-    }
-    display()
-    {
-        console.log(`Fruit name ${this.name} has color ${this.color}`);
-    }
-}
-
-const obj1 = new Fruits("Apple","Red");
+const obj1 = new Trees("Apple");
 obj1.display();
-const ab1 = new Trees();
 
 
 
