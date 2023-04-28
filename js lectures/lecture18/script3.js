@@ -89,4 +89,29 @@ obj.display();
 const ab = new Shape();
 
 
+class Trees{
+    constructor(name)
+    {
+        this.name = name;
+        console.log(name);
+    }
+}
+
+class Fruits extends Trees{
+    constructor(name,color)
+    {
+        super(name);
+        this.color = color;
+    }
+    display()
+    {
+        console.log(`Fruit name ${this.name} has color ${this.color}`);
+    }
+}
+
+const obj1 = new Fruits("Apple","Red");
+obj1.display();
+const ab1 = new Trees();
+
+
 
