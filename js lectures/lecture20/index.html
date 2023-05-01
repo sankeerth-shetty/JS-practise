@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Api development</h3>
+
+    <p>fetch api -></p>
+    <p>callbacks, promises, theneable, async await :</p>
+    <p>Callbacks : callbacks are function they passed as parameter</p>
+    <p>Exception handling : try, catch</p>
+    <br>
+    <p>Callback hell -></p>
+    <p>The phenomenon which happens when we nest multiple callbacks within a function is called a Callback hell</p>
+    <br>
+    <p>Promises : States : Pending, Fullfield, Rejected, setInterval, SetTimeout</p>
+
+    <script>
+        // function firstFunction(parameter,callback)
+        // {
+        //     callback();
+        // }
+
+        // firstFunction(parameter,function(){
+        //     secondFunction(parameter,function(){
+        //         thirdFunction(parameter,function(){
+
+        //         });
+        //     });
+        // });
+
+        // Promises ->
+
+        // const myPromise = new Promise((resolve,reject) => {
+        //     const error = false;
+        //     if(!error)
+        //     {
+        //         resolve("Okay : your error has been resolved");
+        //     } else {
+        //         reject("No! : we are rejecting your request");
+        //     }
+        // });
+
+        // console.log(myPromise);
+
+        // myPromise.then(value => {
+        //     console.log(value);
+        // });
+
+        // myPromise.then(value => {
+        //     console.log(value);
+        //     return value + " Sankeerth";
+        // }).then(newValue => {
+        //     console.log(newValue);
+        // });
+
+        // const myPromise = new Promise((resolve,reject) => {
+        //     const error = true;
+        //     if(!error)
+        //     {
+        //         resolve("Okay : your error has been resolved");
+        //     } else {
+        //         reject("No! : we are rejecting your request");
+        //     }
+        // });
+
+        // console.log(myPromise);
+
+        // const myPromise = new Promise((resolve,reject) => {
+        //     const error = true;
+        //     if(!error)
+        //     {
+        //         resolve("Okay : your error has been resolved");
+        //     } else {
+        //         reject("No! : we are rejecting your request");
+        //     }
+        // });
+
+        // myPromise.then(value => {
+        //     console.log(value);
+        // });
+
+        // myPromise.then(value => {
+        //     return value + " Run";
+        // }).then(newValue => {
+        //     console.log(newValue);
+        // }).catch(err => {
+        //     console.log(err);
+        // });
+
+        // myPromise.then(value => {
+        //     return value + " Run";
+        // }).then(newValue => {
+        //     console.log(newValue);
+        // }).catch(err => {
+        //     console.error(err);
+        // });
+
+        
+    </script>
+</body>
+</html>
