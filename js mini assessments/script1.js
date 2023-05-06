@@ -23,3 +23,4 @@ const cars = new Cars("Bmw",120);
 cars.myCarSpeed();
 cars.accelerate();
 cars.brake();
+cars.myCarSpeed();
