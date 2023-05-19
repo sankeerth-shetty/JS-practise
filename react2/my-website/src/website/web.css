@@ -1,0 +1,39 @@
+*{
+    background-color: #080e33;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header{
+    margin-top: 30px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 30%;
+    font-size: 25px;
+}
+
+.nba{
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.navb{
+    width: 40%;
+    align-items: center;
+}
+
+.navb .nba:hover{
+    text-decoration: underline;
+}
+
+
