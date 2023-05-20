@@ -3,12 +3,12 @@
 }
 
 .container{
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
 }
 
 .header{
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .row{
@@ -28,12 +28,21 @@
 }
 
 .navb{
-    width: 40%;
+    width: 35%;
     align-items: center;
 }
 
 .navb .nba:hover{
-    text-decoration: underline;
+    color: rgb(241, 73, 129);
 }
 
+.img-con{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.image{
+    margin-top: 60px;
+    width: 100%;
+}
 
