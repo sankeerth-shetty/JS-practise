@@ -7,11 +7,14 @@ function Body(){
             <div className='img-con'>
                 <img src={img1} className='image'/>
             </div>
-            <div className='container row'>
+            <div className='container row cons1'>
                 <div className='content'>
                     <h2 className='heading'>LOREM IPSUM DOLOR</h2>
                     <h3 className='sub-head'>LOREM IPSUM DOLOR SIT AI</h3>
                     <p className='main-con'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div className='anc'>
+                    <a href='#' className='ancb'>Shop Now</a>
                 </div>
             </div>
         </div>
