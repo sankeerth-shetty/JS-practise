@@ -93,3 +93,16 @@
 .ancb:hover{
     background-color: purple;
 }
+
+.social{
+    width: 20%;
+}
+
+.social a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer{
+    color: white;
+}
