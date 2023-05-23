@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.24.0/babel.min.js" integrity="sha512-kFrUHvBbXP1ATbv0qLetemWzYzfDOEaiEbboWQE6kxS/gdIVCcKjYCpaIOMiEKOTgpy8dLh1OxtEqeDzgFZJkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <!-- <script type="text/jsx">
+        class StoryBox extends React.Component{
+            render(){
+                return(<div> Hello World </div>);
+            }
+        }
+
+        var target = document.getElementById('react-app')
+        ReactDOM.render(<StoryBox/>,target)
+    </script> -->
+    <script type="text/jsx">
+        
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        // root.render(
+        //     <React.StrictMode>
+        //         <App />
+        //     </React.StrictMode>
+        // );
+
+        const element = 
+        <div className='text'>
+            <h1>Hello, World</h1>
+            
+            <ol>
+                <li>car</li>
+                <li>bike</li>
+                <li>truck</li>
+            </ol>
+
+            <ul>
+                <li>tom</li>
+                <li>jerry</li>
+                <li>spike</li>
+            </ul>
+        </div>
+
+        root.render(element);     
+    </script>
+</body>
+
+</html>
