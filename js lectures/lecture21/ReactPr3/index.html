@@ -8,6 +8,8 @@
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./web.css">
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.24.0/babel.min.js" integrity="sha512-kFrUHvBbXP1ATbv0qLetemWzYzfDOEaiEbboWQE6kxS/gdIVCcKjYCpaIOMiEKOTgpy8dLh1OxtEqeDzgFZJkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
     <title>Document</title>
 </head>
@@ -21,10 +23,10 @@
             }
         }
 
-        var target = document.getElementById('react-app')
+        var target = document.getElementById('root')
         ReactDOM.render(<StoryBox/>,target)
     </script> -->
-    <script type="text/jsx">
+    <!-- <script type="text/jsx">
         
         const root = ReactDOM.createRoot(document.getElementById('root'));
         // root.render(
@@ -48,6 +50,51 @@
                 <li>jerry</li>
                 <li>spike</li>
             </ul>
+        </div>
+
+        root.render(element);     
+    </script> -->
+    <script type="text/jsx">
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+
+        const element = 
+        <div>
+            <header className='container header'>
+                <nav className='row'>
+                    <div className='logo'>
+                        <a href='#' className='nba'>YOURLOGO</a>
+                    </div>
+                    <div className='row navb'>
+                        <a href='#' className='nba'>Services</a>
+                        <a href='#' className='nba'>Products</a>
+                        <a href='#' className='nba'>About Us</a>
+                        <a href='#' className='nba'>Contact</a>
+                    </div>
+                </nav>
+            </header>
+
+            <div className='img-con'>
+                <img src='./image.png' className='image'/>
+            </div>
+            <div className='container row cons1'>
+                <div className='content'>
+                    <h2 className='heading'>LOREM IPSUM DOLOR</h2>
+                    <h3 className='sub-head'>LOREM IPSUM DOLOR SIT AI</h3>
+                    <p className='main-con'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div className='anc'>
+                    <a href='#' className='ancb'>Shop Now</a>
+                </div>
+            </div>
+            
+            <div className='container row footer'>
+                <p>©Copyright Year | Yourname</p>
+                <div className='row social'>
+                    <p><a href='#' className='row'><i className="fa-brands fa-twitter fa-md"></i>&nbsp; Twitter</a></p>
+                    <p><a href='#' className='row'><i className="fa-brands fa-facebook-f fa-md"></i>&nbsp; Facebook</a></p>
+                    <p><a href='#' className='row'><i className="fa-brands fa-instagram fa-md"></i>&nbsp; Instagram</a></p>
+                </div>
+            </div>
         </div>
 
         root.render(element);     
