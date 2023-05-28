@@ -1,0 +1,10 @@
+*{
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.text{
+    text-align: center;
+}
+.fs{
+    margin: 10px;
+}
