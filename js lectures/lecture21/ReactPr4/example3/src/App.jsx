@@ -4,13 +4,17 @@ import Post from './components/Post'
 function App() {
   return (
     <main className="text">
-      <Post author="Tony" body="Iron Man"/>
+      <Post author="J K Rowling" body="Harry Potter"/>
       <br/>
-      <Post author="Steve" body="Captain America" />
+      <Post author="Robert Kiyosaki" body="Rich Dad Poor Dad" />
       <br/>
-      <Post author="Bruce" body="Incredible Hulk"/>
+      <Post author="Enid Blyton" body="Famous Five"/>
       <br/>
-      <Post author="Thor" body="God Of Thunder"/>
+      <Post author="Stephen King" body="The Shining"/>
+      <br/>
+      <Post author="Ruskin Bond" body="The Blue Umbrella"/>
+      <br/>
+      <Post author="R K Narayan" body="Malgudi Days"/>
       <br/>
     </main>
   )
