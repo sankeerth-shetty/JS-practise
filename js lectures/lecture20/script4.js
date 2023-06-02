@@ -37,3 +37,30 @@
 // let res = addition (25,50,50,50);
 // console.log(res);
 
+// -> Convert Array To Object
+
+// const fruits = ["Apple","Mango","Orange"];
+// const obj = Object.assign({}, fruits);
+// console.log(obj);
+
+// const fruits = ["Apple","Mango","Orange"];
+// const obj = {};
+// fruits.forEach((value,index) => {
+//     obj[`Key ${index}`] = value;
+// });
+// console.log(obj);
+
+// const fruits = ["Apple","Mango","Orange"];
+// const map = new Map([
+//     ['name','Alex Hales'],
+//     ['age',27],
+//     ['country','US']
+// ])
+
+// console.log(map);
+// console.log(map.delete('name'));
+// console.log(map);
+// console.log(map.size);
+
+// map.set("name","Shetty");
+// console.log(map);
