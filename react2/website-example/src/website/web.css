@@ -1,0 +1,108 @@
+* {
+    background-color: #080e33;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.header {
+    margin-top: 40px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 30%;
+    font-size: 25px;
+}
+
+.nba {
+    text-decoration: none;
+    color: white;
+}
+
+.navb {
+    width: 35%;
+    align-items: center;
+}
+
+.navb .nba:hover {
+    color: rgb(241, 73, 129);
+}
+
+.img-con {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.image {
+    margin-top: 60px;
+    width: 100%;
+}
+
+.content {
+    margin-top: 25px;
+    width: 50%;
+}
+
+.heading {
+    font-size: 55px;
+    color: white;
+}
+
+.sub-head {
+    font-size: 32px;
+    color: #d572db;
+    position: relative;
+    top: -28px;
+}
+
+.main-con {
+    font-size: 20px;
+    font-style: italic;
+    color: white;
+    position: relative;
+    top: -38px;
+}
+
+.cons1 {
+    display: flex;
+    align-items: center;
+}
+
+.anc {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.ancb {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border: 4px solid #d572db;
+    padding: 10px 60px;
+}
+
+.ancb:hover{
+    background-color: purple;
+}
+
+.social{
+    width: 30%;
+}
+
+.social a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer{
+    color: white;
+}
