@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Validate from './validate'
+import Validate from './validate2'
 
 function App() {
   return(
