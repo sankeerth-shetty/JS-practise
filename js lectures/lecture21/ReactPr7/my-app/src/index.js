@@ -8,9 +8,13 @@ import Numbers from './numbers';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Name />
-    <Boolean />
-    <Numbers />
+    <div className='center'>
+      <Name />
+      <hr/>
+      <Boolean />
+      <hr/>
+      <Numbers />
+    </div>
   </React.StrictMode>
 );
 
