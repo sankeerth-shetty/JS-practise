@@ -4,6 +4,7 @@ import './index.css';
 import Name from './name';
 import Boolean from './boolean';
 import Numbers from './numbers';
+import Todo from './todolist';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,6 +15,8 @@ root.render(
       <Boolean />
       <hr/>
       <Numbers />
+      <hr/>
+      <Todo />
     </div>
   </React.StrictMode>
 );

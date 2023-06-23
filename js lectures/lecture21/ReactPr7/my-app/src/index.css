@@ -15,3 +15,10 @@ code {
 .center{
   text-align: center;
 }
+
+.licenter{
+  width: 15%;
+  margin: 0 auto;
+  border: 1px solid;
+  text-align:justify;
+}
