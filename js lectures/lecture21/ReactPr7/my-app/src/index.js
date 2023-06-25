@@ -5,6 +5,7 @@ import Name from './name';
 import Boolean from './boolean';
 import Numbers from './numbers';
 import Todo from './todolist';
+import Post from './useRef';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,6 +18,8 @@ root.render(
       <Numbers />
       <hr/>
       <Todo />
+      <hr/>
+      <Post />
     </div>
   </React.StrictMode>
 );
